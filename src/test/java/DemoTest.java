@@ -41,8 +41,7 @@ public class DemoTest {
         $(byText("Reading")).click();
         $(byText("Music")).click();
 
-        File file = new File("C:/Users/Artem/Desktop/82762.jpg");
-        $("#uploadPicture").uploadFile(file);
+        $("#uploadPicture").uploadFromClasspath("82762.jpg");
 
         $("textarea#currentAddress").setValue("test message test messagetest messagetest messagetest messagetest message ");
 
