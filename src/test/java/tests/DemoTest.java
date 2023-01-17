@@ -29,7 +29,7 @@ public class DemoTest extends TestBase{
                 .setPhone("8123123343")
                 .setBirthDate("17", "July", "2012")
                 .setSubject("English")
-                .setHobbies()
+                .setHobbies("Sports")
                 .setPicture("82762.jpg")
                 .setAddress("test message test messagetest messagetest messagetest messagetest message ")
                 .setState("NCR")

@@ -5,6 +5,7 @@ import pages.components.CalendarComponent;
 import pages.components.RegistrationResultsModal;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.by;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -22,9 +23,7 @@ public class RegistrationPage {
             phoneInput = $("input#userNumber"),
             dateOfBirthInput = $("input#dateOfBirthInput"),
             subjectInput = $("input#subjectsInput"),
-            sportChackbox = $("#hobbiesWrapper").$(byText("Sports")),
-            readingCheckbox = $("#hobbiesWrapper").$(byText("Reading")),
-            musicCheckbox = $("#hobbiesWrapper").$(byText("Music")),
+            hobbyCheckBox = $("#hobbiesWrapper"),
             setPicture = $("#uploadPicture"),
             setAddress = $("textarea#currentAddress"),
             setState = $("input#react-select-3-input"),
@@ -94,13 +93,8 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setHobbies() {
-        sportChackbox.click();
-//       readingCheckbox.setValue(value).click();
-//       musicCheckbox.setValue(value).click();
-//        $("#hobbiesWrapper").$(byText("Sports")).click();
-//        $("#hobbiesWrapper").$(byText("Reading")).click();
-//        $("#hobbiesWrapper").$(byText("Music")).click();
+    public RegistrationPage setHobbies(String hobby) {
+        hobbyCheckBox.$(byText(hobby)).click();
 
         return this;
     }
