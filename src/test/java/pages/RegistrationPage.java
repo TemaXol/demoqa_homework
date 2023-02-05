@@ -1,14 +1,14 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import com.github.javafaker.PhoneNumber;
 import pages.components.CalendarComponent;
 import pages.components.RegistrationResultsModal;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.by;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPage {
 
@@ -19,7 +19,7 @@ public class RegistrationPage {
             firstNameInput = $("input#firstName"),
             lastNameInput = $("input#lastName"),
             emailInput = $("input#userEmail"),
-            genderInput = $(".custom-control-label"),
+            genderInput = $("#genterWrapper"),
             phoneInput = $("input#userNumber"),
             dateOfBirthInput = $("input#dateOfBirthInput"),
             subjectInput = $("input#subjectsInput"),
@@ -57,12 +57,12 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setGender(String value) {
-        genderInput.shouldHave(text(value)).click();
+        genderInput.$(byText(value)).click();
 
         return this;
     }
 
-    public RegistrationPage setPhone(String value) {
+    public RegistrationPage setPhone(String  value) {
         phoneInput.setValue(value);
 
         return this;

@@ -1,54 +1,51 @@
 package tests;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import pages.RegistrationPage;
+import utils.RandomeData;
 
-import java.io.File;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.by;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
-public class DemoTest extends TestBase{
+public class DemoTest extends TestBase {
+
+    RandomeData randomeData = new RandomeData();
+
+
 
     @Test
     void qaDemoTest() {
-        String firstName = "First";
-        String lastName = "Last";
 
         registrationPage
                 .openPage()
-                .setFirstName(firstName)
-                .setLastName(lastName)
-                .setEmail("test@test.com")
-                .setGender("Male")
-                .setPhone("8123123343")
-                .setBirthDate("17", "July", "2012")
-                .setSubject("English")
-                .setHobbies("Sports")
-                .setPicture("82762.jpg")
-                .setAddress("test message test messagetest messagetest messagetest messagetest message ")
-                .setState("NCR")
-                .setCity("Noida")
+                .setFirstName(randomeData.firstName)
+                .setLastName(randomeData.lastName)
+                .setEmail(randomeData.email)
+                .setGender(randomeData.sex)
+                .setPhone(randomeData.phone)
+                .setBirthDate(randomeData.day, randomeData.month, randomeData.year)
+                .setSubject(randomeData.subject)
+                .setHobbies(randomeData.hobbie)
+                .setPicture(randomeData.image)
+                .setAddress(randomeData.address)
+                .setState(randomeData.state)
+                .setCity(randomeData.city)
                 .submitClick();
 
 // Проверка заполнения полей
 
         registrationPage.verifyResultsModalAppears()
-                .verifyResult("Student Name", firstName + " " + lastName)
-                .verifyResult("Student Email", "test@test.com")
-                .verifyResult("Gender", "Male")
-                .verifyResult("Mobile", "8123123343")
-                .verifyResult("Date of Birth", "17 July,2012")
-                .verifyResult("Subjects", "English")
-                .verifyResult("Hobbies", "Sports")
-                .verifyResult("Picture", "82762.jpg")
-                .verifyResult("Address", "test message test messagetest messagetest messagetest messagetest message ")
-                .verifyResult("State and City", "NCR Noida");
+                .verifyResult("Student Name", randomeData.firstName + " " + randomeData.lastName)
+                .verifyResult("Student Email", randomeData.email)
+                .verifyResult("Gender", randomeData.sex)
+                .verifyResult("Mobile", randomeData.phone)
+                .verifyResult("Date of Birth", randomeData.day + " " + randomeData.month + "," + randomeData.year)
+                .verifyResult("Subjects", randomeData.subject)
+                .verifyResult("Hobbies", randomeData.hobbie)
+                .verifyResult("Picture", randomeData.image)
+                .verifyResult("Address", randomeData.address)
+                .verifyResult("State and City", randomeData.state + " " + randomeData.city);
 
 
     }
