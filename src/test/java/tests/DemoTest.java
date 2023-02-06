@@ -1,5 +1,4 @@
 package tests;
-
 import org.junit.jupiter.api.Test;
 import utils.RandomeData;
 
@@ -39,7 +38,5 @@ public class DemoTest extends TestBase {
                 .verifyResult("Picture", randomeData.image)
                 .verifyResult("Address", randomeData.address)
                 .verifyResult("State and City", randomeData.state + " " + randomeData.city);
-
-
     }
 }

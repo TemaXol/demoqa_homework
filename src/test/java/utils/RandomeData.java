@@ -8,7 +8,6 @@ import java.util.Random;
 
 public class RandomeData {
 
-
     Faker faker = new Faker();
 
     public String firstName = faker.name().firstName();
