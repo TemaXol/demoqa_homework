@@ -1,14 +1,12 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.github.javafaker.PhoneNumber;
 import pages.components.CalendarComponent;
 import pages.components.RegistrationResultsModal;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.by;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class RegistrationPage {
 
@@ -62,7 +60,7 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setPhone(String  value) {
+    public RegistrationPage setPhone(String value) {
         phoneInput.setValue(value);
 
         return this;

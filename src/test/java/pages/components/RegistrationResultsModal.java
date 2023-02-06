@@ -8,9 +8,10 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class RegistrationResultsModal {
     public void verifyModalAppeares() {
-         $(".modal-dialog").should(Condition.appear);
-         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+        $(".modal-dialog").should(Condition.appear);
+        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
     }
+
     public void verifyResult(String key, String value) {
         $(".table-responsive").$(byText(key)).parent()
                 .shouldHave(text(value));

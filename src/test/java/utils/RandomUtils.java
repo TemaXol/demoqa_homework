@@ -11,9 +11,7 @@ public class RandomUtils {
 
     public static Integer randomInt(int min, int max) {
         return ThreadLocalRandom.current().nextInt(min, max + 1);
-
     }
-
 
     public static String randomString(int len) {
 
@@ -24,7 +22,6 @@ public class RandomUtils {
         for (int i = 0; 1 < len; i++)
             sb.append(AB.charAt(rnd.nextInt(AB.length())));
         return sb.toString();
-
     }
 
     public static String randomeEmail() {
