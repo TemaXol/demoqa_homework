@@ -44,8 +44,8 @@ public class RandomeData {
     int arrayCity = Var.nextInt(2);
     public String city = randomCity.get(arrayCity);
 
-    public String day = faker.options().option("1", "2", "3", "4", "5", "6", "7", "8",
-            "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19");
+    public String day = faker.options().option("01", "02", "03", "04", "05", "06", "07", "08",
+            "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19");
     public String month = faker.options().option("January", "February", "March",
             "April", "May", "June", "July", "August", "September", "October", "November", "December");
     public String year = faker.options().option("2012", "2013", "2010", "2015", "2022", "2024");
