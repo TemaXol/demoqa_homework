@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.DemoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-06T21:07:09" hostname="DESKTOP-T1L377U" time="8.313">
+<testsuite name="tests.DemoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-07T17:43:55" hostname="DESKTOP-T1L377U" time="82.003">
   <properties/>
-  <testcase name="qaDemoTest()" classname="tests.DemoTest" time="8.313"/>
+  <testcase name="qaDemoTest()" classname="tests.DemoTest" time="82.003"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 56659
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-февр. 07, 2023 12:07:12 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+  <system-err><![CDATA[февр. 07, 2023 8:43:55 PM org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer createTracer
+INFO: Using OpenTelemetry for tracing
+февр. 07, 2023 8:44:27 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-февр. 07, 2023 12:07:12 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 109, so returning the closest version found: a no-op implementation
-февр. 07, 2023 12:07:12 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-INFO: Unable to find CDP implementation matching 109.
-февр. 07, 2023 12:07:12 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
-WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.3` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>
