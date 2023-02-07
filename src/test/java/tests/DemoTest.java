@@ -5,7 +5,6 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import utils.RandomeData;
-
 import static com.codeborne.selenide.Selenide.webdriver;
 import static io.qameta.allure.Allure.attachment;
 import static io.qameta.allure.Allure.step;
@@ -15,6 +14,7 @@ public class DemoTest extends TestBase {
     RandomeData randomeData = new RandomeData();
     AttachmentsTest attachmentsTest = new AttachmentsTest();
 
+
     @Test
     @Tag("homework")
     public void qaDemoTest() {
@@ -23,6 +23,7 @@ public class DemoTest extends TestBase {
 
         step("Открыть форму регистрации", () -> {
             registrationPage.openPage();
+            TestBase.removeScript();
         });
         step("Ввестти Имя и Фамилию" + randomeData.firstName + randomeData.lastName, () -> {
             registrationPage.setFirstName(randomeData.firstName)
