@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.DemoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-07T17:43:55" hostname="DESKTOP-T1L377U" time="82.003">
+<testsuite name="tests.DemoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-07T18:43:14" hostname="DESKTOP-T1L377U" time="64.554">
   <properties/>
-  <testcase name="qaDemoTest()" classname="tests.DemoTest" time="82.003"/>
+  <testcase name="qaDemoTest()" classname="tests.DemoTest" time="64.554"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[февр. 07, 2023 8:43:55 PM org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer createTracer
+  <system-err><![CDATA[февр. 07, 2023 9:43:14 PM org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer createTracer
 INFO: Using OpenTelemetry for tracing
-февр. 07, 2023 8:44:27 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+февр. 07, 2023 9:43:41 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

@@ -17,7 +17,7 @@ import static org.openqa.selenium.logging.LogType.BROWSER;
 public class AttachmentsTest {
 
     @Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")
-    public byte[] testattachments() {
+    public static byte[] testattachments() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
