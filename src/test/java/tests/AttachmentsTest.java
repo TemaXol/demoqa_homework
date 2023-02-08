@@ -41,7 +41,7 @@ public class AttachmentsTest {
     public static String addVideo() {
 
         return "<html><body><video width= '100%' height= '100%' controls autoplay><source src='"
-                + getVideoUrl()
+                + getVideoUrl(getSessionId())
                 + "' type='video/mp4'></video></body></html>";
     }
 
